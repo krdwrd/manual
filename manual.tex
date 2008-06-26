@@ -1,0 +1,215 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{html,makeidx}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\title{KrdWrd - The Tool}
+
+\author{Maria Cieschinger, Kilian Klimek, Egon Stemle}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+In the beginning the Internet was created. That made a lot of people very angry and was widely regarded as a bad move.
+
+
+\section{Getting Started}
+In this section, we will give you information about how to use the tool. If you have not installed it yet, go to \htmladdnormallink{krdwrd.org}{https://krdwrd.org/trac/wiki/AddOn} and get it. Of course, you will need \htmladdnormallink{Firefox}{http://www.mozilla.com}, too. \\
+
+\begin{itemize}
+\item Since the add-on depends on a special proxy server to connect to the Internet - you can only grab and submit Web pages from the krdwrd.org corpora - it may be a good idea to create a separate profile just for working with the add-on. If you want to create a profile but have no idea how, have a look \htmladdnormallink{here}{http://kb.mozillazine.org/Profile_Manager}. \\
+\item When grabbing a page for the first time, or selecting a corpus for the first time you will be asked to authenticate for the \htmladdnormallink{krdwrd Off-Line Proxy}{https://krdwrd.org/trac/wiki/WebProxy}. The username and password in the dialog box are already filled in and it is save to leave the "Use Password Manager to remember this password" checked. \\
+\htmladdimg{../images/krdwrd_proxy.jpg} \\
+
+\item The proxy server will deny all requests that are not part of the normal add-on operation. If you ever see something like \\
+\htmladdimg{../images/blocked.jpg} \\
+it is most likely because you tried to surf the Web with the wrong Firefox profile. \\
+
+\item You will be asked for authentication a second time. This authentication is for the krdwrd.org web site and requires your \emph{RZ Account}\footnote{This is the same login as for \emph{Stud.IP} and \emph{WebMail}; in case you want to "Use Password Manger" please also "Use a master password" to protect your sensitive information.} \\
+
+\htmladdimg{../images/krdwrd_login.jpg} 
+\end{itemize}
+
+
+\subsection{First Steps}
+
+\begin{itemize}
+	\item {\large \textbf{How to Use the Mouse}}\\
+When moving the mouse over the page, you will notice that certain areas are highlighted in pink. These are the blocks of text that you can tag. Sometimes the pink areas are fairly small (single words or lines of text), sometimes they are pretty large (whole paragraphs, or even whole pages). So it makes sense to move the mouse around a little before you actually start tagging because sometimes you will want to mark big areas as, say, 'bad', and it saves you a lot of time if you do not have to tag every single line or paragraph. As a rule of thumb, it often makes sense to mark \emph{everything} in red ('bad'), from top to bottom, and only then to start tagging smaller pieces in yellow or green ('don't know' or 'good', respectively) (see also \textbf{\hyperref{Examples}{Examples, described on page~}{}{Examples}, \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnT}}).\\ \\
+
+
+	\item {\large \textbf{How to Choose the Tag}}\\
+
+This section deals with assigning tags. If you want information on how to choose the \emph{right} tag to assign, go to the \hyperref{Annotation Guidlines}{Annotation Guidlines on page ~}{}{Annotation}. \\
+
+For tagging a pink-highlighted section as 'good', 'bad', or 'don't know', you have two options: You can use (1) keyboard shortcuts (hotkeys) or you can use (2) the context menu (rightclick).\\
+\begin{enumerate}
+	\item Keyboard Shortcuts
+		\begin{itemize}
+			\item \emph{bad}: ctrl+alt+1
+			\item \emph{don't know}: ctrl+alt+2
+			\item \emph{good}: ctrl+alt+3
+			\item \emph{clear annotation}: ctrl+alt+4
+		\end{itemize}
+	\item Context Menu
+		\begin{itemize}
+			\item Rightclick when you are over the section you want to tag, then choose KrdWrd, and then the tag you want to use. \\
+			\htmladdimg{../images/ctxmenu.jpg}
+			\item Using the context menu is not recommended, however. It is much more time-consuming to navigate the menu than to use the keyboard shortcuts.
+			\item Note also that if the mouse cursor leaves the menu area, a possibly different part of the page will be highlighted for tagging (namely the part that is now 'under' your mouse).
+		\end{itemize}
+\end{enumerate}
+
+	\item {\large \textbf{Cookies and Certificates}}\\
+When some of the pages are being loaded, your web browser will ask you whether you want to accept a certificate or cookies (the latter depending, of course, on your browser settings: If you use a separate profile for the krdwrd add-on, just allow all cookies, see \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnT}). You \emph{do not} have to accept any cookies, and you also \emph{do not} have to accept any certificates (just choose the option "Do not accept this certificate and do not connect to this Web site").  However, nothing bad will happen if you do accept those. \\
+\htmladdimg{../images/certificate.jpg} \\
+\end{itemize}
+
+\subsection{The Statusbar Menu}
+
+This section describes the status bar menu, depicted below. \\
+
+\htmladdimg{../images/krdwrd_menu.jpg}
+
+\begin{itemize}
+	\item {\large \textbf{Tracking}}\\
+Here you can turn on or off whether sections of the web page you are currently viewing are highlighted in pink. Usually there is no need to disable tracking. However, in some rare cases, this might help you to get a better view on a page before tagging it. \\
+	\item {\large \textbf{Submit}}\\
+When you are done tagging a page, i.e.~when everything on the page is green, red, or yellow, you can submit the page with this menu option - and the next page will load automatically. For your convenience, you can also use the keyboard shortcut \emph{options+shift+N}. \\
+
+	\item {\large \textbf{Grab Page}}\\
+Clicking here loads a new, un-annotated page. Once you annotated the whole corpus, you will be redirected to your personal statistics page. \\ \\
+	\item {\large \textbf{Corpus}}\\
+Here you can select one of the (predefined) available corpora. But you should stick to the CleanEval corpus for now.\\ \\
+	\item {\large \textbf{Utils}}\\
+\htmladdimg{../images/krdwrd_menu2.jpg} \\
+The options in this menu make your life easier when tagging pages. \\
+	\begin{itemize}
+		\item {\large \textbf{Propagate}}\\
+Here you can explicitly propagate a given tag down to all sibling nodes. This is helpful when you have a large portion that should be tagged red but all its siblings should be tagged green. You can then tag the parent node green, propagate, and re-tag the parent node as red. This way you don't need to tag all the siblings separately. (Try this on the \hyperref{Examples}{Examples, described on page~}{}{Examples}).
+		\item {\large \textbf{Toggle Sidebar}}\\
+Clicking here opens the sidebar. In the sidebar you can see all of the text in the current page and how it is tagged. A given tag is usually propagated down to lower nodes in the DOM tree automatically, but sometimes it may be unclear (i.e. not directly visible in the page) how a particular portion of text is tagged. In the sidebar you can easily see whether it is tagged red, green, or yellow.
+		\item {\large \textbf{Design Mode}}\\
+This is a debugging feature and you must not use it while tagging pages. \\
+	\end{itemize}
+	\item {\large \textbf{My Stats}}\\
+This menu option will send you to your krdwrd.org account. There you can see how many pages you have already tagged, and you can view and re-submit your tagged pages.
+\end {itemize}
+
+
+
+
+
+
+\section{How to Tag Pages}
+
+\subsection{Annotation Guidelines}
+\label{Annotation}
+In the previous section, we described how to use the tool and how to assign tags. In the following, we give you guidelines regarding \emph{which} the tags should be assigned to a particular kind of text.
+
+\begin{itemize}
+	\item Everything that is \emph{boilerplate} is tagged \textbf{red}. \emph{Boilerplate} is \ldots
+	\begin{enumerate}
+		\item all navigation information,
+		\item copyright information,
+		\item hyperlinks that are not part of the text,
+		\item all kinds of headers and footers.
+	\end{enumerate}
+	$\rightarrow$ Generally speaking, boilerplate is everything that can be used interchangeably with any other Web page or what could be thrown away without changing the general information of the page.
+%	\end{enumerate}
+	\item The following types of text are also tagged \textbf{red}:
+	\begin{enumerate}
+		\item incomplete sentences, or text in telegraphic style,
+		\item text containing 'non-words' such as file names,
+		\item off-site advertisements (i.e. advertisement from an external page),
+		\item text in any other language than English,
+		\item lists of any kind.
+	\end{enumerate}
+	\item All captions are tagged \textbf{yellow}. And also everything that does not belong in the red or green category is tagged \textbf{yellow}.
+	\item All text that is left is tagged \textbf{green}, i.e. \ldots
+	\begin{enumerate}
+		\item text made up of complete sentences,
+		\item text that makes us of 'normal' words.
+		\item text that is written in English.
+	\end{enumerate}
+\end{itemize}
+
+Simple, is not it? You will notice that on some pages you can only highlight very large areas, on others the choices are less restricted. If you tag an element, the tag assigned is propagated to all elements that are contained in this area. However, if you are not sure whether a specific element is entailed, just tag it too to be on the safe side (remember the \emph{sidebar option} mentioned in the previous section!).\\
+
+In a previous section, we said that as a rule, it often makes sense to mark \emph{everything} in red ('bad'), from top to bottom, and only then to start tagging smaller pieces in yellow or green ('don't know' or 'good', respectively). The easiest way to tag a whole page red is to mark the outermost rim of the page and tag that as 'bad'. Due to the tag propagation, the whole page is now tagged as 'bad'. If you want to make sure that this is so, check the sidebar (see above).\\
+
+Due to the structure of some pages, you will have to make a judgment call: Overall, is there more 'good' text than 'bad' text? If so, then mark the whole area in green, if not, then tag it as 'bad'. \\
+
+This may all be a bit confusing now. But fear not, in the next sections you will have the possibility to check whether you understood everything. \\
+
+
+\subsection{Examples - Easy}
+\label{Examples}
+
+\begin{itemize}
+\item \htmladdnormallink{Example 1}{https://krdwrd.org/pages/dat/ceval/input/ceval.356.html} \\
+This is a fairly standard web page. Advertisements and boilerplate should be easy to spot and easy to tag.\\
+
+\item \htmladdnormallink{Example 2}{https://krdwrd.org/pages/dat/ceval/input/ceval.568.html} \\
+This should be easy, too.
+
+% "let it shine"
+\item \htmladdnormallink{Example 3}{https://krdwrd.org/pages/dat/ceval/input/ceval.673.html} \\
+Similar to \emph{Example 1} but you will have to invest a little more time, since the layout is not as clean. Is there something that is not 'good' in the text portion? How should you treat the headlines? What about the headlines' subtitles? \\
+
+% alles rot seite
+\item \htmladdnormallink{Example 4}{https://krdwrd.org/pages/dat/ceval/input/ceval.637.html} \\
+Somehow similar to \emph{Example 2}. Why is even the text portion not 'good'? \\
+
+\end{itemize}
+
+\subsection{Examples - Medium}
+\htmladdnormallink{Example 5}{https://krdwrd.org/pages/dat/ceval/input/ceval.035.html}
+
+\htmladdnormallink{Example 6}{https://krdwrd.org/pages/dat/ceval/input/ceval.143.html}
+
+% kann man nicht so markieren wie man will
+\htmladdnormallink{Example 7}{https://krdwrd.org/pages/dat/ceval/input/ceval.248.html}
+
+% einfacher erst gruen dann rot zu markieren
+\htmladdnormallink{Example 8}{https://krdwrd.org/pages/dat/ceval/input/ceval.379.html}
+
+% man kann nur ganz oder garnicht markieren. resultat immer suboptimal
+\htmladdnormallink{Example 9}{https://krdwrd.org/pages/dat/ceval/input/ceval.583.html}
+
+
+\subsection{Examples - Hard}
+% 
+\htmladdnormallink{Example 10}{https://krdwrd.org/pages/dat/ceval/input/ceval.719.html}
+
+% braindamage
+\htmladdnormallink{Example 12}{https://krdwrd.org/pages/dat/ceval/input/ceval.613.html}
+
+\section{Tips \& Tricks}
+\label{TnT}
+\subsection{Keyboard Shortcuts}
+The default shortcuts for tags are \\
+\begin{itemize}
+	\item \emph{bad}: ctrl+alt+1
+	\item \emph{don't know}: ctrl+alt+2
+	\item \emph{good}: ctrl+alt+3
+	\item \emph{clear annotation}: ctrl+alt+4
+\end{itemize}
+
+Depending on the size of your keyboard and your hands, this may really hurt after some pages. But you can change the shortcuts. All you need is the \htmladdnormallink{keyconfig}{http://forums.mozillazine.org/viewtopic.php?t=72994} addon.
+
+\begin{itemize}
+	\item You need to switch the proxy off to install the addon (remember the \htmladdnormallink{krdwrd Off-Line Proxy}{https://krdwrd.org/trac/wiki/WebProxy}?). To turn the proxy off, go to \emph{Preferences $ \rightarrow $ Advanced $ \rightarrow $ Network $ \rightarrow $ Settings...} and check \emph{No Proxy}.
+	\item Once the proxy is turned off, \htmladdnormallink{install keyconfig}{http://mozilla.dorando.at/keyconfig.xpi}.
+	\item don't forget to turn the proxy back on.
+	\item bring up the keyconfig menu by pressing \emph{Ctrl+Shift+F12}. (Mac users press \emph{Command+Shift+F12}).
+	\item The commands you are looking to change are named \textbf{Tag Bad}, \textbf{Tag Good} and \textbf{Tag Unknown}.
+	\item close your Firefox window and reopen it. If you don't do this, the newly set shortcots won't work.
+	\item You might want to turn off automatic updates for addons, the proxy will block the update atempts anyway.
+\end{itemize}
+
+
+\end{document}
