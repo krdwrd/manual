@@ -4,7 +4,7 @@
 \usepackage{enumerate}
 \usepackage{amsmath}
 
-\title{KrdWrd - The Tool}
+\title{The KrdWrd Add-on}
 
 \author{Maria Cieschinger, Kilian Klimek, Egon Stemle}
 
@@ -12,22 +12,19 @@
 \maketitle
 
 \section{Introduction}
-Today's technology enables us to process enormous amounts of linguistic data; with the ever growing Web as "an unprecedented and virtually inexhaustible source of authentic natural language data" [webascorpus.sourceforge.net], and considering that "[\ldots]the availability of large text corpora has changed the scientific approach to language in linguistics and cognitive science" [M\&S] we should be ready set-up to research phenomen in linguistics, lexicography, natural language processing, artificial intelligence and many other fields that were not considered interesting enough or were simply not detectable at all in small toy domains.
 
-However, after crawling content from the Web the subsequent steps, namely, filtering, language identification, tokenising, lemmatising, part-of-speech tagging, indexing, etc. suffer from " 'large and messy' training corpora [\ldots] and interesting [\ldots] regularities may easily be lost among the countless duplicates, indedx and directory pages, Web spam, open or disguised advertising, and boilerplate. Therefore. thorough preprocessing and cleaning of Web corpora is crucial in order to obtain reliable frequency data." [A lightweight and efficient tool for cleaning Web pages, severt]
 
-CleanEval is a shared task and competitive evaluation on the topic of cleaning arbitrary web pages, with the goal of preparing web data for use as a corpus, for linguistic and language technology research and development [CleanEval: a comp. for cleaning webpages by Baroni and Cantree and Kilgarriff and Sharoff].
+"The availability of large text corpora has changed the scientific approach to language in linguistics and cognitive science" [M\&S].
+Today, the by far richest source for authentic natural language data is the World Wide Web, and making it useful as a data source for scientific research is imperative.
 
-CleanEval-1 has been completed satisfactorily in Autum 2007. However, several points emerged from building a participating system [FIASCO] and the discussions at the workshop. The KrdWrd project is -- partly -- a direct successor of the FIASCO system but also promotes some fundamental chages in architecture and general set-up.
+Web sites, however, can not be used for computational linguistic processing without filtering:
+They contain code for processing by the web browser, there are menus, headers footers, form fields, teasers, out-links, spam-text - all of which needs to be stripped.
 
-In particular the system refines
-\begin{itemize}
-	\item ...
-\end{itemize}    
-and introduces
-\begin{itemize}
-	\item ...
-\end{itemize}
+The dimension of this task calls for an automated solution, the broadness of the problem for machine learning based approaches.
+Part of the KrdWrd project deals with the development of appropriate methods, but they require hand-annotated pages for training.
+
+The \textit{KrdWrd Add-on} aims at making this kind of tagging of web sites possible.
+For users, we provide accurate web site presentation and annotation utilities in a typical browsing environment, while preserving the original document and all the additional information contained therein.
 
 
 \section{Getting Started}
