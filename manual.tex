@@ -3,11 +3,11 @@
 \usepackage{html,makeidx}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{graphicx}
 
 \title{The KrdWrd Add-on}
-
-\author{Maria Cieschinger, Kilian Klimek, Egon Stemle}
-
+% \author{Maria Cieschinger, Kilian Klimek, Egon Stemle}
+\author{}
 \begin{document}
 \maketitle
 
@@ -33,14 +33,21 @@ In this section, we will give you information about how to use the tool. If you 
 \begin{itemize}
 \item Since the add-on depends on a special proxy server to connect to the Internet - you can only grab and submit Web pages from the KrdWrd corpora - it may be a good idea to create a separate profile just for working with the add-on. If you want to create a profile but have no idea how to do that, have a look \htmladdnormallink{here}{http://kb.mozillazine.org/Profile_Manager}. \\
 \item When grabbing a page for the first time, or selecting a corpus for the first time you will be asked to authenticate for the \htmladdnormallink{krdwrd Off-Line Proxy}{https://krdwrd.org/trac/wiki/WebProxy}. The username and password in the dialog box are already filled in and it is save to leave the "Use Password Manager to remember this password" checked. \\
-\htmladdimg{../images/krdwrd_proxy.jpg} \\
+
+\includegraphics[width=0.6\textwidth]{images/prxylogin.png}
+\medskip
 
 \item The proxy server will deny all requests that are not part of the normal add-on operation. If you ever see something like \\
-\htmladdimg{../images/blocked.jpg} \\
+
+\includegraphics[width=0.6\textwidth]{images/blocked.png}
+\medskip
+
 it is most likely because you tried to surf the Web with the wrong Firefox profile. \\
 
 \item You will be asked for authentication a second time. This authentication is for the KrdWrd Web site and requires your \emph{RZ Account}\footnote{This is the same login as for \emph{Stud.IP} and \emph{WebMail}; in case you want to "Use Password Manger" please also "Use a master password" to protect your sensitive information.} \\
-\htmladdimg{../images/krdwrd_login.jpg} \\ 
+
+\includegraphics[width=0.6\textwidth]{images/stlogin.png}
+\medskip
 
 \item When you request a page from the corpus for the first time, Firefox will popup a security warning. The warning says \emph{"you have requested an encrypted page that contains some unencrypted data"}. The warning is issued because the corpus page are issued unencrypted. Your login credentials are never send to the server unencrypted, there is no reason not to ignore this warning. \\
 
@@ -69,23 +76,25 @@ For tagging a pink-highlighted section as 'good', 'bad', or 'uncertain', you hav
 		\end{itemize}
 	\item Context Menu
 		\begin{itemize}
-			\item Rightclick when you are over the section you want to tag, then choose KrdWrd, and then the tag you want to use. \\
-			\htmladdimg{../images/ctxmenu.jpg}
+			\item Rightclick when you are over the section you want to tag, then choose KrdWrd, and then the tag you want to assign. 
+				\smallskip
+				\includegraphics[width=0.5\textwidth]{images/ctxmenu.png}
+				\medskip
 			\item Using the context menu is not recommended, however. It is much more time-consuming to navigate the menu than to use the keyboard shortcuts.
 			\item Note also that if the mouse cursor leaves the menu area, a possibly different part of the page will be highlighted for tagging (namely the part that is now 'under' your mouse).
 		\end{itemize}
 \end{enumerate}
 
 	\item {\large \textbf{Cookies and Certificates}}\\
-When some of the pages are being loaded, your Web browser will ask you whether you want to accept a certificate or cookies (the latter depending, of course, on your browser settings: If you use a separate profile for the KrdWrd add-on, just allow all cookies, see \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnT}). You \emph{do not} have to accept any cookies, and you also \emph{do not} have to accept any certificates (just choose the option "Do not accept this certificate and do not connect to this Web site").  However, nothing bad will happen if you do accept those. \\
-\htmladdimg{../images/certificate.jpg} \\
+When some of the pages are being loaded, your Web browser will ask you whether you want to accept cookies (of course, depending on your browser settings: If you use a separate profile for the KrdWrd add-on, just allow all cookies, see \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnT}). Actually, you \emph{do not} have to accept any cookies; however, nothing bad will happen if you do accept them.
 \end{itemize}
 
 \subsection{The Statusbar Menu}
 
 This section describes the status bar menu, depicted below. \\
 
-\htmladdimg{../images/krdwrd_statusbarmenu.jpg}
+\includegraphics[width=0.6\textwidth]{images/stsbrmenu.png}
+\medskip
 
 \begin{itemize}
 	\item {\large \textbf{Tracking}}\\
@@ -163,17 +172,21 @@ This may all be a bit confusing now. But fear not, in the next sections you will
 \begin{itemize}
 \item \htmladdnormallink{Example 1}{https://krdwrd.org/pages/bin/view/432} \\
 This is a fairly standard Web page. Advertisements and boilerplate should be easy to spot and easy to tag.\\
+\includegraphics[width=0.6\textwidth]{images/432.png} \\
 
 \item \htmladdnormallink{Example 2}{https://krdwrd.org/pages/bin/view/433} \\
-This should be easy, too.
+This should be easy, too. \\
+\includegraphics[width=0.6\textwidth]{images/433.png} \\
 
 % "let it shine"
 \item \htmladdnormallink{Example 3}{https://krdwrd.org/pages/bin/view/434} \\
 Similar to \emph{Example 1} but you will have to invest a little more time, since the layout is not as clean. Is there something that is not 'good' in the text portion? How should you treat the headlines? What about the headlines' subtitles? \\
+\includegraphics[width=0.6\textwidth]{images/434.png} \\
 
 % alles rot seite
 \item \htmladdnormallink{Example 4}{https://krdwrd.org/pages/bin/view/435} \\
 Somehow similar to \emph{Example 2}. Why is even the text portion not 'good'? \\
+\includegraphics[width=0.6\textwidth]{images/435.png} \\
 
 \end{itemize}
 
@@ -181,19 +194,24 @@ Somehow similar to \emph{Example 2}. Why is even the text portion not 'good'? \\
 \label{ExMedium}
 \begin{itemize}
 \item \htmladdnormallink{Example 5}{https://krdwrd.org/pages/bin/view/436} \\
-Remember wich language you should tag (and that all text in another language is bad). How should you tag the enumerations?
+Remember wich language you should tag (and that all text in another language is bad). How should you tag the enumerations? \\
+\includegraphics[width=0.6\textwidth]{images/436.png} \\
 
 \item \htmladdnormallink{Example 6}{https://krdwrd.org/pages/bin/view/437} \\
-This one is all about enumerations.
+This one is all about enumerations. \\
+\includegraphics[width=0.6\textwidth]{images/437.png} \\
 
 \item \htmladdnormallink{Example 7}{https://krdwrd.org/pages/bin/view/438} \\
-Once you have decided how much of the text is junk, this is fairly easy. Propagate is you friend.
+Once you have decided how much of the text is junk, this is fairly easy. Propagate is you friend. \\
+\includegraphics[width=0.6\textwidth]{images/438.png} \\
 
 \item \htmladdnormallink{Example 8}{https://krdwrd.org/pages/bin/view/439} \\
-This can be easy with the right strategy. One of the rare pages where it is easier if you don't start with tagging everything red first.
+This can be easy with the right strategy. One of the rare pages where it is easier if you don't start with tagging everything red first. \\
+\includegraphics[width=0.6\textwidth]{images/439.png} \\
 
 \item \htmladdnormallink{Example 9}{https://krdwrd.org/pages/bin/view/440} \\
-Sometimes there are no technical difficulties.
+Sometimes there are no technical difficulties. \\
+\includegraphics[width=0.6\textwidth]{images/440.png} \\
 
 \end{itemize}
 
@@ -201,11 +219,13 @@ Sometimes there are no technical difficulties.
 \begin{itemize}
 % 
 \item \htmladdnormallink{Example 10}{https://krdwrd.org/pages/bin/view/441}\\
-By now this should be easy for you. 
+By now this should be easy for you. \\
+\includegraphics[width=0.6\textwidth]{images/441.png} \\
 
 % braindamage
 \item \htmladdnormallink{Example 12}{https://krdwrd.org/pages/bin/view/442} \\
-This one is a bit like example 9 but with technical difficulties. You might rather want to go to your dentist. This is really as bad as it can be. If you can do this all other pages are a piece of cake.
+This one is a bit like example 9 but with technical difficulties. You might rather want to go to your dentist. This is really as bad as it can be. If you can do this all other pages are a piece of cake. \\
+\includegraphics[width=0.6\textwidth]{images/442.png} \\
 
 \end{itemize}
 \section{Tips \& Tricks}
@@ -222,10 +242,10 @@ The default shortcuts for tags are \\
 Depending on the size of your keyboard and your hands, this may really hurt after some pages. But you can change the shortcuts. All you need is the \htmladdnormallink{keyconfig}{http://forums.mozillazine.org/viewtopic.php?t=72994} add-on.
 
 \begin{itemize}
-	\item \htmladdnormallink{install keyconfig}{http://mozilla.dorando.at/keyconfig.xpi}.
-	\item bring up the keyconfig menu by pressing \emph{Ctrl+Shift+F12}. (Mac users press \emph{Command+Shift+F12}).
-	\item The commands you are looking to change are named \textbf{Tag Bad}, \textbf{Tag Good} and \textbf{Tag Unknown}.
-	\item close your Firefox window and reopen it. If you don't do this, the newly set shortcots won't work.
+	\item \htmladdnormallink{Install keyconfig}{http://mozilla.dorando.at/keyconfig.xpi}.
+	\item Bring up the keyconfig menu by pressing \emph{Ctrl+Shift+F12}. (Mac users press \emph{Command+Shift+F12}).
+	\item The commands you want to change are named \textbf{Tag Bad}, \textbf{Tag Good} and \textbf{Tag Unknown}.
+	\item Close your Firefox window and reopen it; otherwise, the newly set shortcuts will not work.
 \end{itemize}
 
 
@@ -236,10 +256,10 @@ There are two main uses for the propagate utility. Either there are many good te
 With propagate you can often get around tagging each chunk by hand.
 
 \begin{itemize}
-\item Remember to check each text portions tag to be correct. \\
-\item It is important that text is tagged right, you don't have to care about the background color (and you really should'nt). \\
-\item propagate will tag text and text only. And you really should not care about the color of the background where the text is written on. \\
-\item most pages in \hyperref{Examples - Medium}{Examples - Medium, page ~}{}{ExMedium} are significantly faster to tag when using the propagate utility. \\
+\item Remember to check each text portion's tag to be correct. \\
+\item It is important that text is tagged right, you don't have to care about the background color (and you really shouldn't). \\
+\item Propagate will tag text and text only. And you really should not care about the color of the background where the text is written on. \\
+\item Most pages in \hyperref{Examples - Medium}{Examples - Medium, page ~}{}{ExMedium} are significantly faster to tag when using the propagate utility. \\
 \end{itemize}
 
 \end{document}
