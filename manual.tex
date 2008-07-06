@@ -96,12 +96,13 @@ When you are done tagging a page, i.e.~when everything on the page is green, red
 	\item {\large \textbf{Grab Page}}\\
 Clicking here loads a new, un-annotated page. Once you annotated the whole corpus, you will be redirected to your personal statistics page. \\ \\
 	\item {\large \textbf{Corpus}}\\
-Here you can select one of the (predefined) available corpora. But you should stick to the CleanEval corpus for now.\\ \\
+	% XXX: which corpus???
+Here you can select one of the (predefined) available corpora. But you should stick to the Canola corpus for now.\\ \\
 	\item {\large \textbf{Utils}}\\
 The options in this menu make your life easier when tagging pages. \\
 	\begin{itemize}
 		\item {\large \textbf{Propagate}}\\
-Here you can explicitly propagate a given tag down to all sibling nodes. This is helpful when you have a large portion that should be tagged red but all its siblings should be tagged green. You can then tag the parent node green, propagate, and re-tag the parent node as red. This way you do not need to tag all the siblings separately. (Try this on the \hyperref{Examples}{Examples, described on page~}{}{Examples}).
+Here you can explicitly propagate a given tag down to all sibling nodes. This is helpful when you have a large portion that should be tagged red but all its siblings should be tagged green. You can then tag the parent node green, propagate, and re-tag the parent node as red. This way you do not need to tag all the siblings separately. (Try this on the \hyperref{Examples}{Examples, described on page~}{}{Examples} and check the \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnTProp}).
 		\item {\large \textbf{Toggle Sidebar}}\\
 Clicking here opens the sidebar. In the sidebar you can see all of the text in the current page and how it is tagged. A given tag is usually propagated down to lower nodes in the DOM tree automatically, but sometimes it may be unclear (i.e. not directly visible in the page) how a particular portion of text is tagged. In the sidebar you can easily see whether it is tagged red, green, or yellow.
 		\item {\large \textbf{Design Mode}}\\
@@ -229,6 +230,7 @@ Depending on the size of your keyboard and your hands, this may really hurt afte
 
 
 \subsection{How and When To Use Propagate}
+\label{TnTProp}
 There are two main uses for the propagate utility. Either there are many good text portions embeded in bad text portions (or vice versa). Or there are many small chunks of text cluttered around the page.
 
 With propagate you can often get around tagging each chunk by hand.
