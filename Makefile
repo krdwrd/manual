@@ -12,6 +12,7 @@ htmls: manual.tex
 		-local_icons \
 		-no_footnode \
 		manual.tex
+	cp html.css html/manual.css
 
 clean:
 	rm -rf *.pdf *.log *.aux *.out html krdwrd_tutorial 
