@@ -1,13 +1,46 @@
+\newcommand{\myauthor}{The KrdWrd Team}
+\newcommand{\mymail}{krdwrd@krdwrd.org}
+\newcommand{\mytitle}{The KrdWrd Add-on Manual}
+\newcommand{\myStitle}{\mytitle}
+\newcommand{\mypdftitle}{\myStitle}
+\newcommand{\mykeywords}{keyword1, keyword2, keyword3}
+
 \documentclass[12pt,a4paper]{article}
 \usepackage[latin1]{inputenc}
+\usepackage[pdftex]{color}
+\definecolor{fuchsia}{rgb}{1,0,1}
+\definecolor{myblue}{rgb}{0.25,0.25,0.75}
+\definecolor{darkblue}{rgb}{0,0,0.75}
+\definecolor{darkred}{rgb}{0.4,0,0}
+\usepackage[pdftex, final=true, pdfstartview=FitH]{hyperref}
+\hypersetup{ 
+colorlinks=true,
+bookmarks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+bookmarksopenlevel=2,
+pdftitle={\mypdftitle},
+pdfauthor={\myauthor},
+pdfsubject={\mytitle},
+%pdfkeywords={\mykeywords},
+pdfproducer={pdflatex, inkscape, gnuplot},
+frenchlinks=true,
+pdfborder=0 0 0,
+linkcolor=myblue,
+%pagecolor=darkblue,
+urlcolor=myblue,
+citecolor=darkred,
+setpagesize=true
+}
+
 \usepackage{html,makeidx}
 \usepackage{enumerate}
 \usepackage{amsmath}
 \usepackage{graphicx}
 
-\title{The KrdWrd Add-on Manual}
+\title{\mytitle}
 % \author{Maria Cieschinger, Kilian Klimek, Egon Stemle}
-\author{}
+\author{\myauthor}
 \begin{document}
 \maketitle
 
@@ -31,11 +64,11 @@ For users, we provide accurate Web page presentation and annotation utilities in
 In this section, we will give you information about how to use the tool. If you have not installed it yet, go to \htmladdnormallink{krdwrd.org}{https://krdwrd.org/trac/wiki/AddOn} and get it. Of course, you will need \htmladdnormallink{Firefox}{http://www.mozilla.com}, too. \\
 
 \begin{itemize}
-\item Since the add-on depends on a special proxy server to connect to the Internet - you can only grab and submit Web pages from the KrdWrd corpora - it may be a good idea to create a separate profile just for working with the add-on. If you want to create a profile but have no idea how to do that, have a look \htmladdnormallink{here}{http://kb.mozillazine.org/Profile_Manager}. \\
-\item When grabbing a page for the first time, or selecting a corpus for the first time you will be asked to authenticate for the \htmladdnormallink{krdwrd Off-Line Proxy}{https://krdwrd.org/trac/wiki/WebProxy}. The username and password in the dialog box are already filled in and it is save to leave the "Use Password Manager to remember this password" checked. \\
-
-\includegraphics[width=0.6\textwidth]{images/prxylogin.png}
-\medskip
+\item Since the add-on depends on a special proxy server to connect to the Internet - you can only grab and submit Web pages from the KrdWrd corpora - it may be a good idea to create a separate profile just for working with the add-on. If you want to create a profile but have no idea how to do that, have a look at the \emph{Firefox Support Knowledge Base} under \htmladdnormallink{Managing Profiles}{http://support.mozilla.com/en-US/kb/managing+profiles}. \\
+%\item When grabbing a page for the first time, or selecting a corpus for the first time you will be asked to authenticate for the \htmladdnormallink{krdwrd Off-Line Proxy}{https://krdwrd.org/trac/wiki/WebProxy}. The user name and password in the dialog box are already filled in and it is save to leave the "Use Password Manager to remember this password" checked. \\
+%
+%\includegraphics[width=0.6\textwidth]{images/prxylogin.png}
+%\medskip
 
 \item The proxy server will deny all requests that are not part of the normal add-on operation. If you ever see something like \\
 
@@ -44,12 +77,12 @@ In this section, we will give you information about how to use the tool. If you 
 
 it is most likely because you tried to surf the Web with the wrong Firefox profile. \\
 
-\item You will be asked for authentication a second time. This authentication is for the KrdWrd Web site and requires your \emph{RZ Account}\footnote{This is the same login as for \emph{Stud.IP} and \emph{WebMail}; in case you want to "Use Password Manger" please also "Use a master password" to protect your sensitive information.} \\
+\item To access the KrdWrd site you will be asked for authentication. Members of the University of Osnabr\"{u}ck can use their \emph{RZ Account}\footnote{This is the same login as for \emph{Stud.IP} and \emph{WebMail}.}, others have to use the credentials that were given to them.\footnote{In case you want to "Use Password Manger" please also "Use a master password" to protect your sensitive information.} \\
 
 \includegraphics[width=0.6\textwidth]{images/stlogin.png}
 \medskip
 
-\item When you request a page from the corpus for the first time, Firefox will popup a security warning. The warning says \emph{"you have requested an encrypted page that contains some unencrypted data"}. The warning is issued because the corpus page are issued unencrypted. Your login credentials are never send to the server unencrypted, there is no reason not to ignore this warning. \\
+\item When you request a page from the corpus for the first time, Firefox will pop-up a security warning. The warning says \emph{"you have requested an encrypted page that contains some unencrypted data"}. The warning is issued because the corpus page are issued unencrypted. Your login credentials are never send to the server unencrypted, there is no reason not to ignore this warning. \\
 
 \end{itemize}
 
@@ -58,12 +91,12 @@ it is most likely because you tried to surf the Web with the wrong Firefox profi
 
 \begin{itemize}
 	\item {\large \textbf{How to Use the Mouse}}\\
-When moving the mouse over a Web page, you will notice that certain areas are highlighted in pink. These are the blocks of text that you can tag. Sometimes the pink areas are fairly small (single words or lines of text), sometimes they are pretty large (whole paragraphs, or even whole pages). Thus it makes sense to move the mouse around a little before you actually start tagging because sometimes you want to tag big areas as, say, 'bad', and it saves you a lot of time if you do not have to tag every single line or paragraph. As a rule of thumb, it often makes sense to tag \emph{everything} in red ('bad'), from top to bottom, and only then start tagging smaller pieces in yellow or green ('uncertain' or 'good', respectively) (see also \textbf{\hyperref{Examples}{Examples, described on page~}{}{Examples}, \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnT}}).\\ \\
+When moving the mouse over a Web page, you will notice that certain areas are highlighted in pink. These are the blocks of text that you can tag. Sometimes the pink areas are fairly small (single words or lines of text), sometimes they are pretty large (whole paragraphs, or even whole pages). Thus it makes sense to move the mouse around a little before you actually start tagging because sometimes you want to tag big areas as, say, 'bad', and it saves you a lot of time if you do not have to tag every single line or paragraph. As a rule of thumb, it often makes sense to tag \emph{everything} in red ('bad'), from top to bottom, and only then start tagging smaller pieces in yellow or green ('uncertain' or 'good', respectively) (see also \hyperref{Examples}{Examples, described in~}{}{Examples}, \hyperref{Tips \& Tricks}{Tips \& Tricks, ~}{}{TnT}).\\ \\
 
 
 	\item {\large \textbf{How to Choose the Tag}}\\
 
-This section deals with assigning tags. If you want information on how to choose the \emph{right} tag to assign, go to the \hyperref{Annotation Guidlines}{Annotation Guidlines on page ~}{}{Annotation}. \\
+This section deals with assigning tags. If you want information on how to choose the \emph{right} tag to assign, go to the \hyperref{Annotation Guidelines}{Annotation Guidelines in ~}{}{Annotation}. \\
 
 For tagging a pink-highlighted section as 'good', 'bad', or 'uncertain', you have two options: You can use (1) keyboard shortcuts (hotkeys) or you can use (2) the context menu (rightclick).\\
 \begin{enumerate}
@@ -86,10 +119,10 @@ For tagging a pink-highlighted section as 'good', 'bad', or 'uncertain', you hav
 \end{enumerate}
 
 	\item {\large \textbf{Cookies and Certificates}}\\
-When some of the pages are being loaded, your Web browser will ask you whether you want to accept cookies (of course, depending on your browser settings: If you use a separate profile for the KrdWrd add-on, just allow all cookies, see \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnT}). Actually, you \emph{do not} have to accept any cookies; however, nothing bad will happen if you do accept them.
+When some of the pages are being loaded, your Web browser will ask you whether you want to accept cookies (of course, depending on your browser settings: If you use a separate profile for the KrdWrd add-on, just allow all cookies, see \hyperref{Tips \& Tricks}{Tips \& Tricks, ~}{}{TnT}). Actually, you \emph{do not} have to accept any cookies; however, nothing bad will happen if you do accept them.
 \end{itemize}
 
-\subsection{The Statusbar Menu}
+\subsection{The Status Bar Menu}
 
 This section describes the status bar menu, depicted below. \\
 
@@ -110,7 +143,7 @@ Here you can select one of the (predefined) available corpora. But you should st
 The options in this menu make your life easier when tagging pages. \\
 	\begin{itemize}
 		\item {\large \textbf{Propagate}}\\
-Here you can explicitly propagate a given tag down to all sibling nodes. This is helpful when you have a large portion that should be tagged red but all its siblings should be tagged green. You can then tag the parent node green, propagate, and re-tag the parent node as red. This way you do not need to tag all the siblings separately. (Try this on the \hyperref{Examples}{Examples, described on page~}{}{Examples} and check the \hyperref{Tips \& Tricks}{Tips \& Tricks, page ~}{}{TnTProp}).
+Here you can explicitly propagate a given tag down to all sibling nodes. On the server this is done automatically however, here it is helpful, for example, when you have a large portion that should be tagged red but all its siblings should be tagged green. You can then tag the parent node green, propagate, and re-tag the parent node as red. This way you do not need to tag all the siblings separately. (Try this on the \hyperref{Examples}{Examples, described in~}{}{Examples} and check the \hyperref{Tips \& Tricks}{Tips \& Tricks, ~}{}{TnTProp}).
 		\item {\large \textbf{Toggle Sidebar}}\\
 Clicking here opens the sidebar. In the sidebar you can see all of the text in the current page and how it is tagged. A given tag is usually propagated down to lower nodes in the DOM tree automatically, but sometimes it may be unclear (i.e. not directly visible in the page) how a particular portion of text is tagged. In the sidebar you can easily see whether it is tagged red, green, or yellow.
 		\item {\large \textbf{Design Mode}}\\
@@ -145,16 +178,16 @@ In the previous section, we described how to use the tool and how to assign tags
 	\begin{enumerate}
 		\item incomplete sentences, or text in telegraphic style,
 		\item text containing 'non-words' such as file names,
-		\item off-site advertisements (i.e. advertisement from an external page),
-		\item text in any other language than English,
+		\item obvious off-site advertisements (i.e. advertisement from an external page),
+		\item text in any other language than English (or the language to be tagged),
 		\item lists and enumerations of any kind.
 	\end{enumerate}
-	\item All captions are tagged \textbf{yellow}. And also everything that does not belong in the red or green category is tagged \textbf{yellow}.
+	\item All captions (labels, legends, titles, headings, sub-headings, etc.) are tagged \textbf{yellow}. And also everything that does not belong in the red or green category is tagged \textbf{yellow}.
 	\item All text that is left is tagged \textbf{green}, i.e. \ldots
 	\begin{enumerate}
 		\item text made up of complete sentences, \textbf{even if it is in a list or enumeration},
 		\item text that makes use of 'normal' words.
-		\item text that is written in English.
+		\item text that is written in English (or the language to be tagged).
 	\end{enumerate}
 \end{itemize}
 
@@ -193,7 +226,7 @@ Somehow similar to \emph{Example 2}. Why is even the text portion not 'good'? \\
 \label{ExMedium}
 \begin{itemize}
 \item \htmladdnormallink{Example 5}{https://krdwrd.org/pages/bin/view/436} \\
-Remember wich language you should tag (and that all text in another language is bad). How should you tag the enumerations? \\
+Remember which language you should tag (and that all text in another language is bad). How should you tag the enumerations? \\
 \includegraphics[width=0.6\textwidth]{images/436.png} \\
 
 \item \htmladdnormallink{Example 6}{https://krdwrd.org/pages/bin/view/437} \\
@@ -250,7 +283,7 @@ Depending on the size of your keyboard and your hands, this may really hurt afte
 
 \subsection{How and When To Use Propagate}
 \label{TnTProp}
-There are two main uses for the propagate utility. Either there are many good text portions embeded in bad text portions (or vice versa). Or there are many small chunks of text cluttered around the page.
+There are two main uses for the propagate utility. Either there are many good text portions embedded in bad text portions (or vice versa). Or there are many small chunks of text cluttered around the page.
 
 With propagate you can often get around tagging each chunk individually.
 
@@ -258,7 +291,7 @@ With propagate you can often get around tagging each chunk individually.
 \item Remember to check each text portion's tag to be correct. \\
 \item It is important that text is tagged right, you don't have to care about the background color (and you really shouldn't). \\
 \item Propagate will tag text and text only. And you really should not care about the color of the background where the text is written on. \\
-\item Most pages in \hyperref{Examples - Medium}{Examples - Medium, page ~}{}{ExMedium} are significantly faster to tag when using the propagate utility. \\
+\item Most pages in \hyperref{Examples - Medium}{Examples - Medium, ~}{}{ExMedium} are significantly faster to tag when using the propagate utility. \\
 \end{itemize}
 
 
