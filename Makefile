@@ -1,6 +1,11 @@
+.PHONY: clean
+
 default: htmls pdf
 
 pdf: manual.tex
+	pdflatex manual 
+	-bibtex manual 
+	pdflatex manual 
 	pdflatex manual 
 
 htmls: manual.tex
