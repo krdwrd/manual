@@ -1,14 +1,21 @@
-.PHONY: clean
+PDF_TARGETS = manual.pdf
+TEX_SRCS := $(patsubst %pdf,%tex,$(PDF_TARGETS))
+TEX_XTRA_SRCS :=
+BIB_SRCS := $(wildcard *.bib)
 
-default: htmls pdf
+TEX = pdflatex -file-line-error -interaction=errorstopmode
+LATEXMK_CE_OPTS = '$$cleanup_includes_cusdep_generated=1; \
+		$$clean_ext = "%R.snm %R.nav"; \
+		$$clean_full_ext = $$clean_ext; '
 
-pdf: manual.tex
-	pdflatex manual 
-	-bibtex manual 
-	pdflatex manual 
-	pdflatex manual 
+.PHONY: all clean cleanall
 
-htmls: manual.tex
+all: $(PDF_TARGETS) html/manual.html
+
+$(PDF_TARGETS): %.pdf:%.tex $(TEX_XTRA_SRCS) $(BIB_SRCS)
+	latexmk -pdf -pdflatex="$(TEX)" -bibtex -use-make $<
+
+html/manual.html: $(TEX_SRCS) $(TEX_XTRA_SRCS) $(BIB_SRCS)
 	mkdir html || true
 	latex2html \
 		-dir html \
@@ -20,4 +27,8 @@ htmls: manual.tex
 	cp html.css html/manual.css
 
 clean:
-	rm -rf *.pdf *.log *.aux *.out html krdwrd_tutorial 
+	latexmk -c -bibtex -e $(LATEXMK_CE_OPTS)
+
+cleanall:
+	latexmk -C -bibtex -e $(LATEXMK_CE_OPTS)
+	rm -rf html || true
