@@ -16,7 +16,6 @@ $(PDF_TARGETS): %.pdf:%.tex $(TEX_XTRA_SRCS) $(BIB_SRCS)
 	latexmk -pdf -pdflatex="$(TEX)" -bibtex -use-make $<
 
 html/manual.html: $(TEX_SRCS) $(TEX_XTRA_SRCS) $(BIB_SRCS)
-	mkdir html || true
 	latex2html \
 		-dir html \
 		-contents index.html \
@@ -31,4 +30,4 @@ clean:
 
 cleanall:
 	latexmk -C -bibtex -e $(LATEXMK_CE_OPTS)
-	rm -rf html || true
+	git reset -- html
