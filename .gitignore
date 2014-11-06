@@ -1,3 +1,10 @@
+html/WARNINGS
+html/images.pdf
+html/images.pl
+html/images.tex
+html/internals.pl
+html/labels.pl
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
