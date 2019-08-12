@@ -10,24 +10,24 @@ LATEXMK_CE_OPTS = '$$cleanup_includes_cusdep_generated=1; \
 
 .PHONY: all clean cleanall
 
-all: $(PDF_TARGETS) html/manual.html
+all: $(PDF_TARGETS) docs/manual.html
 
 $(PDF_TARGETS): %.pdf:%.tex $(TEX_XTRA_SRCS) $(BIB_SRCS)
 	latexmk -pdf -pdflatex="$(TEX)" -bibtex -use-make $<
 
-html/manual.html: $(TEX_SRCS) $(TEX_XTRA_SRCS) $(BIB_SRCS)
+docs/manual.html: $(TEX_SRCS) $(TEX_XTRA_SRCS) $(BIB_SRCS)
 	latex2html \
-		-dir html \
+		-dir docs \
 		-contents index.html \
 		-contents_in_navigation \
 		-local_icons \
 		-no_footnode \
 		manual.tex
-	cp html.css html/manual.css
+	cp html.css docs/manual.css
 
 clean:
 	latexmk -c -bibtex -e $(LATEXMK_CE_OPTS)
 
 cleanall:
 	latexmk -C -bibtex -e $(LATEXMK_CE_OPTS)
-	git reset -- html
+	git reset -- docs
