@@ -1,4 +1,5 @@
-Manual
-======
+# Manual
 
-krdwrd Add-on Manual and the Annotation Guidelines for the Project. See [link](http://krdwrd.github.io/manual/) for the web view.
+krdwrd Add-on Manual and the Annotation Guidelines for the Project. See
+* the [online version](http://krdwrd.github.io/manual/)
+* the [pdf file](https://github.com/krdwrd/manual/releases/download/20100831/manual.pdf).
